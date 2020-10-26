@@ -27,7 +27,7 @@ module.exports = {
     entry: 指定需要打包的文件
     * */
     // entry: "./src/js/index.js",
-    entry: "./src/js/index.js",
+    entry: "./src/js/index.ts",
     /*
     output: 指定打包之后的文件输出的路径和输出的文件名称
     * */
@@ -48,14 +48,14 @@ module.exports = {
     module: 告诉webpack如何处理webpack不能够识别的文件
     * */
     module: {
-        // rules: [
-        //     // ts编译配置
-        //     {
-        //         test: /\.tsx?$/,
-        //         use: 'ts-loader',
-        //         exclude: /node_modules/
-        //     }
-        // ]
+        rules: [
+            // ts编译配置
+            {
+                test: /\.tsx?$/,
+                use: 'ts-loader',
+                exclude: /node_modules/
+            }
+        ]
     },
     /*
     plugins: 告诉webpack需要新增一些什么样的功能
