@@ -4,7 +4,7 @@ interface PersonInterface {
     name:string;
     say():void;
 }
-// 只要实现的某一个接口, 那么就必须实现接口中所有的属性和方法
+// 只要实现了某一个接口, 那么就必须实现接口中所有的属性和方法
 class Person implements PersonInterface{
     name:string = 'lnj';
     say():void{
